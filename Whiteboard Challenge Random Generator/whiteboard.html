@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<!-- Randomly generate from a list -->
+
+<html>
+
+<head>
+	<title>Random Generator</title>
+</head>
+
+<body>
+
+<h1>Whiteboard Challenge - Random Generator</h1>
+
+<button onclick="myFunction()">Get a random set of requirements</button>
+
+<p>You should spend ~10 minutes designing a solution for the given user to use the device to complete the task. You should
+	make any relevant and appropriate assumptions to aid the completion of the design.</p>
+<p id="user"></p>
+<p id="device"></p>
+<p id="task"></p>
+
+
+
+
+
+<!--  -------- FUNCTIONS -------- -->
+
+<script type="text/javascript">
+
+//
+// calculate and display the final score
+//
+
+function myFunction() {
+
+	var userItems = ['Elderly female', 'Male student', 'School pupil aged 14', 'Gym owner', 'Professional sportsperson', 'Police officer', 'Shopowner', 'Administrator', 'Pizza Delivery Person', 'Nurse'];
+	var userItem = userItems[Math.floor(Math.random() * userItems.length)];
+
+	var deviceItems = ['Smartphone less than 12 months old', 'Desktop computer', 'VR Headset', 'Tabletop surface', 'Microsoft HoloLens', 'Smartwatch', 'Fitness tracker', 'Tablet', 'Laptop', 'Smartphone more than 3 years old'];
+	var deviceItem = deviceItems[Math.floor(Math.random() * deviceItems.length)];
+
+	var taskItems = ['Book a restaurant catering for dietary requirements', 'Get cash from a cash machine', 'Find information about local cycling routes', 'Upload a photo to a social media for pets', 'Share a photo with a friend', 'Play a game to learn a langauge', 'Buy a new bike', 'Translate language in realtime'];
+	var taskItem = taskItems[Math.floor(Math.random() * taskItems.length)];
+
+  document.getElementById("user").innerHTML = "<b>User: " + userItem + "</b>";
+	document.getElementById("user").innerHTML += "<br>This is the person you should design for. You can specify the specific demographics of your user";
+
+
+	document.getElementById("device").innerHTML = "<b>Device: " + deviceItem + "</b>";
+	document.getElementById("device").innerHTML += "<br>This is the device that your user will be using to complete the task. ";
+
+	document.getElementById("task").innerHTML = "<b>Task: " + taskItem + "</b>";
+	document.getElementById("task").innerHTML += "<br>This is the person you should design for. You should make appropriate assumptions about the specific demographics of your user";
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
